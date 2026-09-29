@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#111">
+<title>Ludo Classic Board</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <div class="top">
+    <h1>🎲 Ludo</h1>
+    <button id="newGame" class="new-btn">NEW GAME</button>
+  </div>
+
+  <div class="demo-bar">
+    <label>Demo winning colour:
+      <select id="winningColor">
+        <option value="green">🟢 Green</option>
+        <option value="red">🔴 Red</option>
+        <option value="yellow">🟡 Yellow</option>
+        <option value="blue">🔵 Blue</option>
+      </select>
+    </label>
+    <span>DEMO MODE</span>
+  </div>
+
+  <div class="turn" id="turnText">🟢 Green's Turn</div>
+
+  <div class="board" id="board">
+    <div class="home home-red" data-color="red">
+      <div class="home-title">RED</div>
+      <div class="yard"><button class="token red" data-color="red">●</button><button class="token red" data-color="red">●</button><button class="token red" data-color="red">●</button><button class="token red" data-color="red">●</button></div>
+    </div>
+    <div class="home home-green" data-color="green">
+      <div class="home-title">GREEN</div>
+      <div class="yard"><button class="token green" data-color="green">●</button><button class="token green" data-color="green">●</button><button class="token green" data-color="green">●</button><button class="token green" data-color="green">●</button></div>
+    </div>
+    <div class="home home-blue" data-color="blue">
+      <div class="home-title">BLUE</div>
+      <div class="yard"><button class="token blue" data-color="blue">●</button><button class="token blue" data-color="blue">●</button><button class="token blue" data-color="blue">●</button><button class="token blue" data-color="blue">●</button></div>
+    </div>
+    <div class="home home-yellow" data-color="yellow">
+      <div class="home-title">YELLOW</div>
+      <div class="yard"><button class="token yellow" data-color="yellow">●</button><button class="token yellow" data-color="yellow">●</button><button class="token yellow" data-color="yellow">●</button><button class="token yellow" data-color="yellow">●</button></div>
+    </div>
+
+    <div class="track top-track" id="topTrack"></div>
+    <div class="track left-track" id="leftTrack"></div>
+    <div class="track right-track" id="rightTrack"></div>
+    <div class="track bottom-track" id="bottomTrack"></div>
+
+    <div class="center">
+      <div class="tri red-tri"></div>
+      <div class="tri green-tri"></div>
+      <div class="tri yellow-tri"></div>
+      <div class="tri blue-tri"></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="status">
+      <div class="dice" id="dice">⚀</div>
+      <div>
+        <div class="rolled" id="rollResult">Ready</div>
+        <div class="message" id="message">Roll the dice to start.</div>
+      </div>
+    </div>
+    <button id="rollButton" class="roll">ROLL DICE</button>
+  </div>
+
+  <div class="players" id="players"></div>
+  <p class="note">Original Ludo-style interface inspired by the classic board layout. The winning-colour control is visibly labelled for demo/testing and is not intended for hidden manipulation of competitive or real-money games.</p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
